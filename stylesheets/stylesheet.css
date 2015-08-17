@@ -1,18 +1,18 @@
 /* 
-base color : #353631
-main color : #0E8A6F
-accent color : #B4C472
-676E4D,939E65
+base color : #0D192B
+main color : #07F9A2
+others : #09C184,
+#0A8967,#0C5149
 */
 
 body{
     width : 100px;
-    background-color : #353631;
+    background-color : #0D192B;
 }
 
 #main{
     top : 100px;
-    color : #B4C472;
+    color : #07F9A2;
     position : absolute;
     width : 100%;
 }
@@ -63,4 +63,21 @@ body{
     width : 600px;
     text-align : center;
     margin : 0 auto;
+}
+
+#menu {
+    position : relative;
+    width : 600px;
+    margin : 0 auto;
+}
+
+#menu > ul {
+    position : relative;
+    list-style: none;
+}
+
+#menu > ul > li {
+    position : relative;
+    text-align : center;
+    padding : 10px;
 }
