@@ -82,10 +82,7 @@ body{
 #menu > ul > li {
     position : relative;
     text-align : center;
-    padding : 10px;
     float : left;
-    width : 200px;
-    padding : 0px 0px 5px 5px;
 }
 
 
@@ -93,13 +90,20 @@ body{
     text-align : center;
     font-size : 16pt;
     color : #09C184;
-    width : 100%;
+    width : 200px;
+    padding : 0;
     display : block;
     text-decoration : none;
+    border-right : solid 1px;
+}
+
+#menu > ul > li:first-child > a {
+    border-left : solid 1px;
 }
 
 #menu > ul > li > a.selected {
     color : #07F9A2;
+    background : #0A8967;
 }
 
 
