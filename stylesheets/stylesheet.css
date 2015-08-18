@@ -68,17 +68,62 @@ body{
 
 #menu {
     position : relative;
-    width : 600px;
+    width : 900px;
     margin : 0 auto;
 }
 
 #menu > ul {
     position : relative;
     list-style: none;
+    float : left;
+    margin : 0 auto;
 }
 
 #menu > ul > li {
     position : relative;
     text-align : center;
     padding : 10px;
+    float : left;
+    width : 200px;
+    padding : 0px 0px 5px 5px;
 }
+
+
+#menu > ul > li > a {
+    text-align : center;
+    font-size : 16pt;
+    color : #09C184;
+    width : 100%;
+    display : block;
+    text-decoration : none;
+}
+
+#menu > ul > li > a.selected {
+    color : #07F9A2;
+}
+
+
+#menu > ul > li:hover {
+    background : #0C5149;
+}
+
+#about {
+    top : 100px;
+}
+
+.content {
+    display : none;
+    padding : 100px;
+    width : 800px;
+    margin : 0 auto;
+    text-align : center;
+}
+
+.content h3 {
+    font-size : 30px;
+}
+
+.content.selected {
+    display : block;
+}
+
