@@ -10,6 +10,9 @@ body{
     background-color : #0D192B;
 }
 
+a:link { color : #28D6A7 }
+a:visited { color : #28D6A7 }
+
 #main{
     top : 100px;
     color : #07F9A2;
@@ -131,3 +134,26 @@ body{
     display : block;
 }
 
+.content.text p {
+    text-align : left;
+}
+
+.content table {
+    width: 100%;
+    border-collapse: separate;
+}
+
+.content th{
+    width: 25%;
+    padding: 6px;
+    text-align: center;
+    vertical-align: top;
+    color: #09C184;
+    border: 1px solid #0A8967;
+}
+
+.content td{
+    text-align : left;
+    padding: 6px;
+    border: 1px solid #0A8967;
+}
