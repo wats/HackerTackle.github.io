@@ -1,4 +1,4 @@
-/* 
+/*
 base color : #0D192B
 main color : #07F9A2
 others : #09C184,
@@ -6,20 +6,20 @@ others : #09C184,
 */
 
 body{
-    width : 100px;
     background-color : #0D192B;
+    color : #07F9A2;
+    padding-top:100px;
 }
-
+a{
+  display: inline-block;
+  padding:0 0.5em;
+}
 a:link { color : #28D6A7 }
 a:visited { color : #28D6A7 }
-
-#main{
-    top : 100px;
-    color : #07F9A2;
-    position : absolute;
-    width : 100%;
+a:hover{background-color:#0C5149}
+header {
+    text-align : center;
 }
-
 
 #logo {
     width : 500px;
@@ -51,9 +51,9 @@ a:visited { color : #28D6A7 }
     margin : 0 auto;
 }
 
-#date{
-    position : relative;
-    font-size : 20pt;
+#overview time{
+  font-weight: bold;
+  font-size : 20pt;
 }
 
 #place {
@@ -62,12 +62,6 @@ a:visited { color : #28D6A7 }
 }
 
 
-#concept {
-    position : relative;
-    width : 600px;
-    text-align : center;
-    margin : 0 auto;
-}
 
 #menu {
     position : relative;
@@ -126,7 +120,7 @@ a:visited { color : #28D6A7 }
     text-align : center;
 }
 
-.content h3 {
+.content h2 {
     font-size : 30px;
 }
 
