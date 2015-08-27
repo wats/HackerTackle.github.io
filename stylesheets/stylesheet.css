@@ -151,3 +151,11 @@ header {
     padding: 6px;
     border: 1px solid #0A8967;
 }
+
+#timetable.content td {
+    text-align : center;
+}
+
+#timetable.content tr.session {
+    height : 8em;
+}

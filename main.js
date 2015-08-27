@@ -31,8 +31,12 @@ function addCurrentSelected(event){
         }
 
     }
+
+    if( !selected ){
+        window.location.hash = "about";
+    }
 }
 
 menu.onclick = addCurrentSelected;
-
+window.onload = addCurrentSelected;
 window.onhashchange = addCurrentSelected;
