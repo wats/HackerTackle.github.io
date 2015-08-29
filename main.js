@@ -30,10 +30,15 @@ function addCurrentSelected(event){
 
     // speaker navigation controll
     if( selectedId === "speaker"){
+        var speakerId = hash.substring(1);
+        if( speakerId == "speaker" ){
+            speakerId = "speaker_1";
+        }
+        
         var ul = document.getElementById("speaker_table");
         for(var i in ul.children){
             var a = ul.children[i].children;
-            if( a && a[0].hash === hash ){
+            if( a && a[0].hash === "#" + speakerId ){
                 a[0].className = "selected";
             }else if(a){
                 a[0].className = "";
@@ -45,8 +50,7 @@ function addCurrentSelected(event){
         for(var i=0; i < contents.length ; i++ ){
             contents[i].classList.remove("speaker_selected");
         }
-
-        var selectedContent = document.getElementById(hash.substring(1));
+        var selectedContent = document.getElementById(speakerId);
         if( selectedContent != null ){
             selectedContent.classList.add("speaker_selected");
         }
