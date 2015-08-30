@@ -209,7 +209,12 @@ header {
     display : none;
 }
 
+.speaker_content p {
+    text-align : left;
+}
+
 .speaker_content li {
+    text-align : left;
     list-style-position : inside; 
 }
 
