@@ -209,6 +209,11 @@ header {
     display : none;
 }
 
+.speaker_content li {
+    list-style-position : inside; 
+}
+
 .speaker_content.speaker_selected {
     display : block;
 }
+
