@@ -221,3 +221,17 @@ header {
 .speaker_content.speaker_selected {
     display : block;
 }
+
+#matsuoka figure{
+  margin: 0;
+  width: 400px;
+  height: 400px;
+  display: block;
+  position: absolute;
+}
+
+@keyframes spin {
+    0% { -webkit-transform:rotateX(0deg) rotateY(15deg) rotateZ(0);}
+    100% { -webkit-transform:rotateX(-3600deg) rotateY(7215deg) rotateZ(360deg);}
+}
+
