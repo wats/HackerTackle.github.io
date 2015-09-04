@@ -215,7 +215,7 @@ header {
 
 .speaker_content .speaker_session_info li {
     text-align : left;
-    list-style-position : inside; 
+    list-style-position : inside;
 }
 
 .speaker_content.speaker_selected {
@@ -231,7 +231,6 @@ header {
 }
 
 @keyframes spin {
-    0% { -webkit-transform:rotateX(0deg) rotateY(15deg) rotateZ(0);}
-    100% { -webkit-transform:rotateX(-3600deg) rotateY(7215deg) rotateZ(360deg);}
+    0% { -webkit-transform:rotateX(0deg) rotateY(0deg) rotateZ(0);}
+    100% { -webkit-transform:rotateX(3600deg) rotateY(7200deg) rotateZ(360deg);}
 }
-
