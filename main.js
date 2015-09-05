@@ -1,5 +1,8 @@
 var menu = document.getElementById("menu");
 
+
+var current_hash = "";
+var speaker_hash = "";
 function addCurrentSelected(event){
     var hash = window.location.hash;
     if( hash === "" ){
@@ -27,35 +30,12 @@ function addCurrentSelected(event){
     var selectedContent = document.getElementById(selectedId);
     selectedContent.classList.add("selected");
 
-
-    // speaker navigation controll
-    if( selectedId === "speaker"){
-        var speakerId = hash.substring(1);
-        if( speakerId == "speaker" ){
-            speakerId = "speaker_1";
-        }
-        
-        var ul = document.getElementById("speaker_table");
-        for(var i in ul.children){
-            var a = ul.children[i].children;
-            if( a && a[0].hash === "#" + speakerId ){
-                a[0].className = "selected";
-            }else if(a){
-                a[0].className = "";
-            }    
-        }
-
-        
-        var contents = document.getElementsByClassName("speaker_content");
-        for(var i=0; i < contents.length ; i++ ){
-            contents[i].classList.remove("speaker_selected");
-        }
-        var selectedContent = document.getElementById(speakerId);
-        if( selectedContent != null ){
-            selectedContent.classList.add("speaker_selected");
-        }
+    if( current_hash === "#timetable" && selectedId === "speaker" ){
+        window.location.reload();
     }
+
     
+    current_hash = hash;
 }
 
 
