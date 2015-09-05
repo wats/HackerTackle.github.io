@@ -157,7 +157,7 @@ header {
 }
 
 #timetable.content tr.session {
-    height : 8em;
+    height : 16em;
 }
 
 
@@ -233,4 +233,8 @@ header {
 @keyframes spin {
     0% { -webkit-transform:rotateX(0deg) rotateY(0deg) rotateZ(0);}
     100% { -webkit-transform:rotateX(3600deg) rotateY(7200deg) rotateZ(360deg);}
+}
+
+a.table-link {
+    text-decoration : none;
 }
