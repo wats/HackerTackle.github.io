@@ -31,9 +31,14 @@ function addCurrentSelected(event){
     selectedContent.classList.add("selected");
 
     if( current_hash === "#timetable" && selectedId === "speaker" ){
-        window.location.reload();
+        speaker_hash = hash;
+        current_hash = "#speaker";
+        window.location.hash = "#speaker";
     }
 
+    if( speaker_hash != "" && hash != speaker_hash && selectedId === "speaker" ){
+        window.location.hash = speaker_hash;
+    }
     
     current_hash = hash;
 }
