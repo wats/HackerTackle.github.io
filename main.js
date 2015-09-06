@@ -1,8 +1,8 @@
 var menu = document.getElementById("menu");
 
 
-var current_hash = "";
-var speaker_hash = "";
+
+
 function addCurrentSelected(event){
     var hash = window.location.hash;
     if( hash === "" ){
@@ -30,18 +30,9 @@ function addCurrentSelected(event){
     var selectedContent = document.getElementById(selectedId);
     selectedContent.classList.add("selected");
 
-    if( current_hash === "#timetable" && selectedId === "speaker" ){
-        speaker_hash = hash;
-        current_hash = "#speaker";
-        window.location.hash = "#speaker";
-    }
-
-    if( speaker_hash != "" && hash != speaker_hash && selectedId === "speaker" ){
-        window.location.hash = speaker_hash;
-    }
     
-    current_hash = hash;
 }
+
 
 
 menu.onclick = addCurrentSelected;
