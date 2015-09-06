@@ -14,8 +14,8 @@ a{
   display: inline-block;
   padding:0 0.5em;
 }
-a:link { color : #28D6A7 }
-a:visited { color : #28D6A7 }
+a:link { color : #FC711C }
+a:visited { color : #FC711C }
 a:hover{background-color:#0C5149}
 header {
     text-align : center;
