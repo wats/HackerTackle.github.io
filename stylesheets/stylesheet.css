@@ -156,8 +156,11 @@ header {
     text-align : center;
 }
 
+
+#timetable.content tr.session td:hover{background-color:#0C5149}
+
 #timetable.content tr.session {
-    height : 16em;
+    height : 14em;
 }
 
 
