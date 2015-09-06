@@ -156,8 +156,11 @@ header {
     text-align : center;
 }
 
+
+#timetable.content tr.session td:hover{background-color:#0C5149}
+
 #timetable.content tr.session {
-    height : 16em;
+    height : 14em;
 }
 
 
@@ -176,37 +179,7 @@ header {
 }
 
 
-.right_nav > ul {
-    margin : 0;
-    padding : 0;
-    list-style: none;
-    margin : 0 auto;
-}
-
-
-.right_nav > ul > li {
-    margin : auto 0;
-    position : relative;
-    text-align : center;
-    width : 100%;
-}
-
-
-.right_nav > ul > li > a {
-    text-align : center;
-    color : #09C184;
-    padding : 0;
-    display : block;
-    text-decoration : none;
-}
-
-.right_nav > ul > li > a.selected {
-    color : #07F9A2;
-    background : #0A8967;
-}
-
 .speaker_content {
-    display : none;
 }
 
 .speaker_content .speaker_session_info p {
@@ -241,4 +214,8 @@ a.table-link {
 
 td.mitei {
     color : #024433;
+}
+
+hr {
+    border-color : #09C184;
 }
