@@ -94,9 +94,6 @@ header {
     border-right : solid 1px;
 }
 
-#menu > ul > li:first-child > a {
-    border-left : solid 1px;
-}
 
 #menu > ul > li > a.selected {
     color : #07F9A2;
