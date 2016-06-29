@@ -1,30 +1,63 @@
-  var canvas1 = document.getElementById('header_image');
-if (canvas1.getContext) {
-    var context1 = canvas1.getContext('2d');
-    var size = 600;
-    var center = size/2;
-    var length = size/3;
-    var time =0;
+
+const WIDTH = 2000;
+const HEIGHT = 600;
+const STEP = 20;
+const CENTER_X = WIDTH / 2;
+
+var canvas = document.getElementById('header_image');
+if (canvas.getContext) {
+    var context = canvas.getContext('2d');
+    context.lineWidth=1;
     setInterval(anim,16);
+}
+var i = 0;
+var waveHeight = 0;
+var prey = Math.cos((i)/100) * HEIGHT + 300;
+var prey2 = Math.sin((i)/100) * HEIGHT + 300;
+
+function randomValue(){
+    return Math.floor(Math.random() * 255);
+}
+function createRandomColor(){
+    return 'rgb('
+      + randomValue() + ' ,' +
+      + randomValue() + ' ,' +
+      + randomValue()
+    ')';
+}
+function feedOut(){
+    context.globalAlpha = 0.1;
+    context.fillStyle = "rgb(0, 29, 33)";
+    context.fillRect(0, 0, WIDTH, HEIGHT);
 
 }
-const SIZE = 2000;
-const STEP = 20;
-var i = 0;
-var prey = Math.cos((i)/100) * 300 + 300;
+var sinColor;
 function anim(){
-  i++;
-  var context;
-  context = context1;
-  x = i * STEP % SIZE;
-    context.strokeStyle = 'rgb('+Math.floor(Math.random() * 255) + ' ,0, 0)';
-  var color = 1 - (x/ SIZE);
-  var y = Math.cos((i*10)/100) * 300 + 300;
-  context.lineWidth=1;
+  x = i * STEP % WIDTH;
+  if(x==0){
+    waveHeight = Math.random() * 300;
+    sinColor = createRandomColor();
+  }
+  var color;
+  if( x < CENTER_X){
+    color = 1;
+  }else{
+    color = (1 - (x / WIDTH))*2;
+  }
+  var y = Math.cos((i*10)/100) * waveHeight + 300;
+  var y2 = Math.sin((i*10)/100) * waveHeight + 300;
   context.globalAlpha = color;
+
+  context.strokeStyle = sinColor;
   context.beginPath();
-  context.moveTo(x-STEP, prey);
-  context.lineTo(x, y);
+  context.moveTo(x -STEP , prey);
+  context.lineTo(x , y);
+  context.stroke();
+  context.beginPath();
+  context.moveTo(x -STEP , prey2);
+  context.lineTo(x , y2);
   context.stroke();
   prey = y;
+  prey2 = y2;
+  i++;
  }
