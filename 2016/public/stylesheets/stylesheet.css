@@ -61,7 +61,7 @@ header nav{
   background-color: rgba(0,0,0,0.8);
   width: 100%;
   text-align: center;
-  box-shadow: 0 40px 40px rgba(0,0,0,.8);
+  box-shadow: 0 10px 20px rgba(0,0,0,.8);
 }
 
 header nav a{
