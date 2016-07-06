@@ -1,22 +1,24 @@
 var canvas = document.getElementById('header_image');
-canvas.style.width = window.innerWidth + 'px';
-canvas.width = window.innerWidth * window.devicePixelRatio;
 const HEIGHT = 600;
-const centerX = canvas.width / 2;
 const centerY = HEIGHT / 2;
 const WAVE_HEIGHT = HEIGHT / 3;
 const FPS = 1000 / 60;
 
+//アニメーション関連
+if(canvas){
+  canvas.style.width = window.innerWidth + 'px';
+  canvas.width = window.innerWidth * window.devicePixelRatio;
+  var centerX = canvas.width / 2;
+  var pointArray = [new Point()];
+  for(i=0; i<6; i++){
+    pointArray.push(new Point());
+  }
 
-var pointArray = [new Point()];
-for(i=0; i<6; i++){
-  pointArray.push(new Point());
-}
-
-if (canvas.getContext) {
-  var context = canvas.getContext('2d');
-  context.lineWidth = 1;
-  setInterval(anim, FPS);
+  if (canvas.getContext) {
+    var context = canvas.getContext('2d');
+    context.lineWidth = 1;
+    setInterval(anim, FPS);
+  }
 }
 
 // service worker関連

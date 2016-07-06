@@ -3,6 +3,7 @@
 
   <head>
     <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
     <!--[if IE]>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <![endif]-->
@@ -36,12 +37,11 @@
   </head>
 
   <body id="index" itemscope itemtype="http://schema.org/Event">
-    <header>
-
+    <header class="site_header">
       <section>
         <h1 itemprop="name">Hacker Tackle</h1>
         <p><time id="date" datetime="2016-09-10"> 2016 - 09 - 10 </time></p>
-        <p>福岡県Ruby・コンテンツ産業振興センター</p>
+        <p><span class="word">福岡県Ruby・</span><span class="word">コンテンツ産業振興</span><span class="word">センター</span></p>
         <p><a href="http://hakat.connpass.com/event/19375" class="register">参加登録</a></p>
       </section>
       <div id="top_header_background"></div>
@@ -49,7 +49,7 @@
 
       <nav >
         <ul>
-          <li><a href="about.html">開催概要</a></li>
+          <li><span class="active">開催概要</span></li>
           <li><a href="timetable.html">タイムテーブル</a></li>
           <li><a href="speaker.html">スピーカー情報</a></li>
           <li><a href="http://hakat.connpass.com/event/19375/">参加登録</a></li>
@@ -64,19 +64,19 @@
     </div>
     <article>
       <section id="about">
-        <h2>ハッカー<small>(Hacker)</small>とは、</h2>
+        <h2><span class="word">ハッカー</span><small>(Hacker)</small><span class="word">とは</span></h2>
         <p>コンピュータ技術に精通した人を指す言葉です。</p>
         <p>普通の人が数日かけて行う仕事を、ちょっとした機転で魔法のように一瞬で片付けます。<wbr>
           ハッカーは１つのプログラミング言語や専門領域に長けているだけではなく、<wbr>コンピュータ技術全体への広範で深遠な理解を元に、多角的な視点を持ち目の前の課題にアプローチすることでそのような魔法を実現します。</p>
       </section>
 
       <section>
-        <h2>福岡の問題点</h2>
+        <h2><span class="word">福岡の</span><span class="word">問題点</span></h2>
         <p>福岡はIT産業振興が盛んで、コミュニティ主体で様々な個別技術に関して深い勉強会が精力的に日夜開催されています。しかし、コンピュータ技術全体を俯瞰し、複数の技術領域にまたがり、深く議論するイベントは定常的に行われていませんでした。</p>
       </section>
 
       <section>
-        <h2>ハッカー・タックル<small>(Hacker Tackle)</small>の誕生</h2>
+        <h2><span class="word">ハッカー・</span><span class="word">タックル</span><small>(Hacker Tackle)</small><span class="word">の誕生</span></h2>
         <p>『Hacker Tackle』は、福岡でそのようなイベントを開催したいという有志たちの思いから生まれました。<wbr>「ハッカー・タックル/博多・来る」の意味を持つイベント名には、福岡の中心地である博多でのハッカー同士のぶつかり稽古という意味合いを込めました。福岡、ひいては九州全体のハッカー文化の醸成にいささかでも貢献できればと夢想しています。</p>
       </section>
 
@@ -87,34 +87,36 @@
 
       <section>
         <h2>イベント要領</h2>
-        <h3>開催日時</h3>
-        <p><time itemprop="startDate" datetime="2016-09-10T13:00+09:00">2016年9月10日(土) 13:00</time> 〜 <time itemprop="endDate" datetime="2016-09-10T18:30+09:00">18:30</time>
-        <h4>開場</h4>
-        <p><time itemprop="doorTime" datetime="2015-09-10T12:30+09:00">12:30</time>)</p>
-      </section>
+        <div itemprop="doorTime" itemscope itemtype="http://schema.org/doorTime">
+          <h3>開催日時</h3>
+          <p><time itemprop="startDate" datetime="2016-09-10T13:00+09:00">2016年9月10日(土) 13:00</time> 〜 <time itemprop="endDate" datetime="2016-09-10T18:30+09:00">18:30</time>
+          <h4>開場</h4>
+          <p><time itemprop="doorTime" datetime="2015-09-10T12:30+09:00">12:30</time>)</p>
+        </div>
 
-      <section itemprop="location" itemscope itemtype="http://schema.org/Place">
-        <h2>会場</h2>
-        <p itemprop="name">福岡県Ruby・コンテンツ産業振興センター (<a href="http://frac.jp/" target="_blank">http://frac.jp/</a>)</p>
-        <p itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-        <meta itemprop="postalCode" content="8120013" />
-        <meta itemprop="addressCountry" content="jp" />
-        <span itemprop="addressRegion">福岡県</span>
-        <span itemprop="addressLocality">福岡市</span>
-        <span itemprop="streetAddress">博多区博多駅東１丁目１７−１</span></p>
-        <p itemprop="geo" itemscope itemtype="http://schema.org/GeoCoordinates">地図情報：<a href="http://goo.gl/qyDrqc" target="_blank">http://goo.gl/qyDrqc</a>
-          <meta itemprop="latitude" content="33.5903689" />
-          <meta itemprop="longitude" content="130.4239637" />
-        </p>
-      </section>
+        <div itemprop="location" itemscope itemtype="http://schema.org/Place">
+          <h3>会場</h3>
+          <p itemprop="name">福岡県Ruby・コンテンツ産業振興センター (<a href="http://frac.jp/" target="_blank">http://frac.jp/</a>)</p>
+          <p itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+          <meta itemprop="postalCode" content="8120013" />
+          <meta itemprop="addressCountry" content="jp" />
+          <span itemprop="addressRegion">福岡県</span>
+          <span itemprop="addressLocality">福岡市</span>
+          <span itemprop="streetAddress">博多区博多駅東１丁目１７−１</span></p>
+          <p itemprop="geo" itemscope itemtype="http://schema.org/GeoCoordinates">地図情報：<a href="http://goo.gl/qyDrqc" target="_blank">http://goo.gl/qyDrqc</a>
+            <meta itemprop="latitude" content="33.5903689" />
+            <meta itemprop="longitude" content="130.4239637" />
+          </p>
+        </div>
 
-      <section itemprop="offers" itemscope itemtype="http://schema.org/AggregateOffer">
-        <h2>入場料</h2>
-        <p>
-          <meta itemprop="priceCurrency" content="JPY" /><span itemprop="lowPrice">???</span>円
-        </p>
-        <small>・当日受付にて支払い</small>
-        <meta itemprop="url" content="http://hackertackle.github.io/" />
+        <div itemprop="offers" itemscope itemtype="http://schema.org/AggregateOffer">
+          <h3>入場料</h3>
+          <p>
+            <meta itemprop="priceCurrency" content="JPY" /><span itemprop="lowPrice">???</span>円
+          </p>
+          <small>・当日受付にて支払い</small>
+          <meta itemprop="url" content="http://hackertackle.github.io/" />
+        </div>
       </section>
     </article>
     <script type="text/javascript" src="scripts/top.js"></script>
