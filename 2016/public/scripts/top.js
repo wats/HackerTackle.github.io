@@ -19,10 +19,13 @@ if (canvas.getContext) {
   setInterval(anim, FPS);
 }
 function anim(){
-  for (point of pointArray) {
-    move(point);
-    paint(context, point);
+  if(window.pageYOffset < HEIGHT + 100){
+    for (point of pointArray) {
+      move(point);
+      paint(context, point);
+    }
   }
+
 }
  function randomValue(){
    return Math.floor(Math.random() * 255);
