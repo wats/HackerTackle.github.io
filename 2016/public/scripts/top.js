@@ -1,20 +1,22 @@
-const WIDTH = 2000;
-const HEIGHT = 600;
-const STEP = 20;
-const CENTER_X = WIDTH / 2;
-const CENTER_Y = HEIGHT / 2;
-const WAVE_HEIGHT = HEIGHT / 3;
 var canvas = document.getElementById('header_image');
+canvas.style.width = window.innerWidth + 'px';
+canvas.width = window.innerWidth * window.devicePixelRatio;
+const HEIGHT = 600;
+const centerX = canvas.width / 2;
+const centerY = HEIGHT / 2;
+const WAVE_HEIGHT = HEIGHT / 3;
+const FPS = 1000 / 60;
+
 
 var pointArray = [new Point()];
-for(i=0; i<3; i++){
+for(i=0; i<6; i++){
   pointArray.push(new Point());
 }
 
 if (canvas.getContext) {
   var context = canvas.getContext('2d');
   context.lineWidth = 1;
-  setInterval(anim, 16);
+  setInterval(anim, FPS);
 }
 function anim(){
   for (point of pointArray) {
@@ -39,7 +41,7 @@ function anim(){
    point.preX = point.x;
    point.preY = point.y;
    point.wave += point.waveWidth;
-   if(point.x > WIDTH){
+   if(point.x > canvas.width){
      reset(point);
    }else{
      point.x += point.speed;
@@ -47,15 +49,15 @@ function anim(){
    }
  }
  function getAlpha(point){
-   if( point.x < CENTER_X){
+   if( point.x < centerX){
      return 1;
    }else{
-     return (1 - (point.x / WIDTH)) * 2;
+     return (1 - (point.x / canvas.width)) * 2;
    }
  }
  function reset(point){
    point.waveHeight = Math.random() * WAVE_HEIGHT + 10;
-   point.speed = Math.random() * 10 + 5;
+   point.speed = Math.random() * 10 + 2;
    point.waveWidth = Math.random() / 5;
    point.wave = Math.random();
    point.preY =  convertY(point);
@@ -67,7 +69,7 @@ function anim(){
  }
 
 function convertY(point){
-  return Math.cos(point.wave) * point.waveHeight + CENTER_Y;
+  return Math.cos(point.wave) * point.waveHeight + centerY;
 }
 
 function paint(context, point){
@@ -78,6 +80,6 @@ function paint(context, point){
   context.lineTo(point.x, point.y);
   context.stroke();
   context.globalAlpha = 0.2;
-  context.fillStyle = "rgb(0, 29, 33)";
+  context.fillStyle = "rgb(0, 0, 0)";
   context.fillRect(point.preX - 1, 0, point.speed, HEIGHT);
 }
