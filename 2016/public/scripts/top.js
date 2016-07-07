@@ -33,7 +33,7 @@ if ('serviceWorker' in navigator) {
 }
 
 var refreshCount = 0;
-var REFRESH_RATE = 30;
+var REFRESH_RATE = 10;
 function anim(){
   if(window.pageYOffset < HEIGHT + 100){
     for (point of pointArray) {
@@ -42,7 +42,7 @@ function anim(){
     }
     refreshCount++;
     if(refreshCount > REFRESH_RATE){
-      context.globalAlpha = 0.1;
+      context.globalAlpha = 0.04;
       context.fillStyle = "rgb(0, 0, 0)";
       context.fillRect(0, 0, canvas.width, HEIGHT);
       refreshCount = 0;
