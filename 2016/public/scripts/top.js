@@ -32,11 +32,20 @@ if ('serviceWorker' in navigator) {
   });
 }
 
+var refreshCount = 0;
+var REFRESH_RATE = 30;
 function anim(){
   if(window.pageYOffset < HEIGHT + 100){
     for (point of pointArray) {
       move(point);
       paint(context, point);
+    }
+    refreshCount++;
+    if(refreshCount > REFRESH_RATE){
+      context.globalAlpha = 0.1;
+      context.fillStyle = "rgb(0, 0, 0)";
+      context.fillRect(0, 0, canvas.width, HEIGHT);
+      refreshCount = 0;
     }
   }
 
@@ -96,7 +105,5 @@ function paint(context, point){
   context.moveTo(point.preX, point.preY);
   context.lineTo(point.x, point.y);
   context.stroke();
-  context.globalAlpha = 0.2;
-  context.fillStyle = "rgb(0, 0, 0)";
-  context.fillRect(point.preX - 1, 0, point.speed, HEIGHT);
+
 }
