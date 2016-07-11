@@ -53,7 +53,9 @@ canvas#header_image{
   width: 100%;
   z-index: -1;
 }
-
+#main{
+  margin:5em;
+}
 
 span.word{
   display: inline-block;
@@ -160,6 +162,26 @@ main h1{
   margin:1em;
   background-color: #333;
   padding:0.5em;
+}
+#loading{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  font-size: 200%;
+  z-index: 9999;
+  display: none;
+}
+
+#loading_back{
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom:0;
+  right:0;
+  background-color:rgba(0,0,0,0.8);
+  z-index: 9998;
+  font-size: 200%;
+  display: none;
 }
 
 @media screen and (max-width: 48em) {

@@ -1,5 +1,6 @@
-var dataCacheName = 'weatherData-v1';
-var cacheName = 'weatherPWA-step-celebrate-1';
+var dataCacheName = 'hackertackle-1';
+var cacheName = 'hackertackle-6';
+var isDebug = true; // キャッシュを無効にする
 var filesToCache = [
   '/',
   '/index.html',
@@ -28,22 +29,16 @@ self.addEventListener('activate', function(e) {
 });
 
 self.addEventListener('fetch', function(e) {
-  var dataUrl = 'https://publicdata-weather.firebaseio.com/';
-  if (e.request.url.indexOf(dataUrl) === 0) {
-    e.respondWith(
-      fetch(e.request)
-        .then(function(response) {
-          return caches.open(dataCacheName).then(function(cache) {
-            cache.put(e.request.url, response.clone());
-            return response;
-          });
-        })
-    );
-  } else {
+  if(isDebug){
+    skipWaiting();
+    return fetch(e.request);
+
+  }else{
     e.respondWith(
       caches.match(e.request).then(function(response) {
         return response || fetch(e.request);
       })
     );
   }
+
 });

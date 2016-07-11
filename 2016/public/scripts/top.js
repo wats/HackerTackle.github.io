@@ -32,6 +32,34 @@ if ('serviceWorker' in navigator) {
   });
 }
 
+$(function() {
+  load("/about.html", true);
+  $(".inPageLink").click(function(){
+    load(this.href, false);
+    return false;
+  });
+});
+
+function load(url, isFirst){
+  $("#loading").show();
+  $("#loading_back").show();
+  $.ajax({
+    url: url,
+    cache: true,
+    success: function(html){
+      $(html).find("#main").each(function(){
+        $("#loading").hide();
+        $("#loading_back").hide();
+        if(!isFirst){
+          history.pushState('','',url);
+          var position = $("#main").offset().top-100;
+        }
+        $("#main").html($(this).html());
+        $('html,body').animate({ scrollTop: position}, 'fast');
+      });
+    }
+  });
+}
 var refreshCount = 0;
 var REFRESH_RATE = 10;
 function anim(){
