@@ -215,6 +215,19 @@ main h1{
     text-align: center;
     margin-top:0;
   }
+  #splash div{
+    left:0;
+    right:0;
+  }
+  #main{
+    margin:1em;
+  }
+  footer .register {
+    width: 95%;
+    padding: 1em 0;
+    margin-left: 0;
+    margin-right:0;
+  }
   header.site_header nav{
     position: static;
   }
