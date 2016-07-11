@@ -72,12 +72,32 @@ function load(url, isFirst){
       $(html).find("#main").each(function(){
         $("#loading").hide();
         $("#loading_back").hide();
-        if(!isFirst){
-          history.pushState('','',url);
-          var position = $("#main").offset().top-100;
-        }
         $("#main").html($(this).html());
-        $('html,body').animate({ scrollTop: position}, 'fast');
+        let now = new Date();
+
+        if ( now.getUTCMonth() == 8 && now.getUTCDate() == 10 && url.indexOf("timetable.html") >= 0) {
+          history.pushState('','',url);
+          let hours = now.getUTCHours();
+          let position;
+          if(hours < 14 - 9){
+            position = $(".hour14").offset().top;
+          } else if(hours < 15 - 9){
+            position = $(".hour15").offset().top;
+          } else if(hours < 16 - 9){
+            position = $(".hour16").offset().top;
+          } else if(hours < 17 - 9){
+            position = $(".hour17").offset().top;
+          } else{
+            position = $("#main").offset().top;
+          }
+
+          $('html,body').animate({ scrollTop: position}, 'fast');
+        }else if(!isFirst){
+          history.pushState('','',url);
+          let position = $("#main").offset().top-100;
+          $('html,body').animate({ scrollTop: position}, 'fast');
+        }
+
       });
     }
   });
