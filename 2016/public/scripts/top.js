@@ -33,9 +33,28 @@ if ('serviceWorker' in navigator) {
 }
 
 $(function() {
-  load("/about.html", true);
+  // 別ページを開いた場合、一回Topを呼びTop内で開き直す処理
+  let allParam = location.href.split("?");
+  if(allParam.length>0){
+    let splits = allParam[1].split("&");
+    let params = {};
+    for (let i = 0; i < splits.length; i++ ) {
+      let param = splits[i].split("=");
+      params[param[0]] = param[1];
+    }
+    if ( 'path' in params){
+      load(params['path'], false);
+    }else{
+      load("/about.html", true);
+    }
+  }else{
+    load("/about.html", true);
+  }
+
   $(".inPageLink").click(function(){
     load(this.href, false);
+    // リンク内を踏んだ場合はサーバー名が含まれるhrefとなりクラス名がつかないためココでactiveを付ける
+    $(this).addClass("active");
     return false;
   });
 });
@@ -43,6 +62,9 @@ $(function() {
 function load(url, isFirst){
   $("#loading").show();
   $("#loading_back").show();
+  // 開いているページのナビゲーションをハイライト
+  $(".inPageLink").removeClass("active");
+  $("[href ^= '"+url+"' ]").addClass("active");
   $.ajax({
     url: url,
     cache: true,
