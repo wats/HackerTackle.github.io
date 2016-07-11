@@ -35,7 +35,7 @@ if ('serviceWorker' in navigator) {
 $(function() {
   // 別ページを開いた場合、一回Topを呼びTop内で開き直す処理
   let allParam = location.href.split("?");
-  if(allParam.length>0){
+  if(allParam.length>1){
     let splits = allParam[1].split("&");
     let params = {};
     for (let i = 0; i < splits.length; i++ ) {
