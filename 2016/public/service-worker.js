@@ -1,6 +1,6 @@
 var dataCacheName = 'hackertackle-1';
 var cacheName = 'hackertackle-7';
-var isDebug = true; // キャッシュを無効にする
+var isDebug = false; // キャッシュを無効にする
 var filesToCache = [
   '/',
   '/index.html',
