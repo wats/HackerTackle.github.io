@@ -63,7 +63,7 @@ function load(url, isFirst){
   $("#loading").show();
   $("#loading_back").show();
   // 開いているページのナビゲーションをハイライト
-  $(".inPageLink").removeClass("active");
+  $(".in_page_link").removeClass("active");
   $("[href ^= '"+url+"' ]").addClass("active");
   $.ajax({
     url: url,
