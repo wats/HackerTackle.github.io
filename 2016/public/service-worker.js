@@ -1,9 +1,15 @@
 var dataCacheName = 'hackertackle-1';
-var cacheName = 'hackertackle-7';
+var cacheName = 'hackertackle-9';
 var isDebug = false; // キャッシュを無効にする
 var filesToCache = [
   '/',
   '/index.html',
+  '/about.html',
+  '/map.html',
+  '/speaker.html',
+  '/timetable.html',
+  '/5f.svg',
+  '/icon.png',
   '/scripts/top.js',
   '/stylesheets/stylesheet.css',
 ];
