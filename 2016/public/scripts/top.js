@@ -51,7 +51,7 @@ $(function() {
     load("/about.html", true);
   }
 
-  $(".inPageLink").click(function(){
+  $(".in_page_link").click(function(){
     load(this.href, false);
     // リンク内を踏んだ場合はサーバー名が含まれるhrefとなりクラス名がつかないためココでactiveを付ける
     $(this).addClass("active");
