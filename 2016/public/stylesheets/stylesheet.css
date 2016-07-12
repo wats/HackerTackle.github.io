@@ -184,10 +184,10 @@ main h1{
   border-color: #ff0;
 }
 .roomK:hover{
-  border-color: #f0f;
+  border-color: #0ff;
 }
 .roomT:hover{
-  border-color: #0ff;
+  border-color: #f0f;
 }
 #loading{
   position: fixed;
