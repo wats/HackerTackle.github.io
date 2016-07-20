@@ -24,10 +24,7 @@ if(canvas){
 // service worker関連
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('./service-worker.js').then(function(registration) {
-    // 登録成功
-    console.log('ServiceWorker registration successful with scope: ', registration.scope);
   }).catch(function(err) {
-    // 登録失敗 :(
     console.log('ServiceWorker registration failed: ', err);
   });
 }
@@ -112,7 +109,7 @@ function anim(){
     }
     refreshCount++;
     if(refreshCount > REFRESH_RATE){
-      context.globalAlpha = 0.04;
+      context.globalAlpha = 0.06;
       context.fillStyle = "rgb(0, 0, 0)";
       context.fillRect(0, 0, canvas.width, HEIGHT);
       refreshCount = 0;

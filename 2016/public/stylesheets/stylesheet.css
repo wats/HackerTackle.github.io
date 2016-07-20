@@ -228,15 +228,6 @@ main h1{
     margin-left: 0;
     margin-right:0;
   }
-  header.site_header nav{
-    position: static;
-  }
-  header.site_header nav > ul > li {
-    padding: 0.4em 0em;
-    display:block;
-    width:100%;
-    margin:0;
-  }
   header.site_header nav a,
   header.site_header nav span {
     display:block;

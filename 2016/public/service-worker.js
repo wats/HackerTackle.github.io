@@ -1,6 +1,6 @@
-var dataCacheName = 'hackertackle-1';
-var cacheName = 'hackertackle-9';
-var isDebug = false; // キャッシュを無効にする
+var dataCacheName = 'hackertackle';
+var cacheName = 'hackertackle-13';
+var isDebug = true; // キャッシュを無効にする
 var filesToCache = [
   '/',
   '/index.html',
@@ -36,7 +36,6 @@ self.addEventListener('activate', function(e) {
 
 self.addEventListener('fetch', function(e) {
   if(isDebug){
-    skipWaiting();
     return fetch(e.request);
 
   }else{

@@ -8,5 +8,5 @@
         "type": "image/png"
       }],
   "start_url": "https://hackertackle2016.firebaseapp.com/",
-  "display": "standalone"
+  "theme_color": "#88ff88"
 }
