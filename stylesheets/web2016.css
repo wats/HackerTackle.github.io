@@ -57,7 +57,7 @@ section {
 a {
   text-decoration: none; }
 
-h2 {
+section h1 {
   font-family: "Roboto Condensed", sans-serif;
   font-size: 40px; }
 
@@ -131,12 +131,6 @@ nav {
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%); }
 
-.header-pc {
-  display: block; }
-
-.header-sp {
-  display: none; }
-
 header {
   background: url(../images/web2016/main.png) center, #000101;
   background-repeat: no-repeat;
@@ -146,9 +140,6 @@ header {
     top: 65px;
     font-size: 30px;
     width: 100%; }
-  header h1 {
-    text-indent: -9999px;
-    overflow: hidden; }
   header .head02date {
     bottom: 169px;
     font-size: 50px;
@@ -194,12 +185,10 @@ header {
     line-height: 1.5;
     font-family: "Hiragino Kaku Gothic ProN", sans-serif;
     margin-top: 10px; }
-  .info .p-pc {
+  .info .info p {
     display: block;
-    white-space: pre-line;
-    padding: 0 20px; }
-  .info .p-sp {
-    display: none; }
+    padding: 0 20px;
+    margin-top: 10px; }
 
 .map-container {
   position: relative; }
@@ -223,7 +212,7 @@ header {
   transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%); }
-  .overlay-inner h2 {
+  .overlay-inner section h1 {
     font-weight: bold;
     line-height: 1.6; }
   .overlay-inner .line {
@@ -280,8 +269,14 @@ footer {
     left: 50%;
     transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
-    -ms-transform: translateX(-50%); } }
+    -ms-transform: translateX(-50%); }
+
+  .logo {
+    display: none; } }
 @media only screen and (max-width: 899px) {
+  .logo {
+    display: block; }
+
   section {
     padding: 45px 0; }
 
@@ -295,12 +290,6 @@ footer {
     width: 60%;
     background-size: contain;
     background-position: center; }
-
-  .header-pc {
-    display: none; }
-
-  .header-sp {
-    display: block; }
 
   header {
     background: url(../images/web2016/main-sp-bg.png) center, #000101;
@@ -333,13 +322,10 @@ footer {
     border-top: 15px solid #082a00;
     height: 15px; }
 
-  .info h2 {
+  .info h1 {
     margin-bottom: 15px; }
-  .info .p-pc {
-    display: none; }
-  .info .p-sp {
-    display: block;
-    margin: 0 auto;
+  .info p {
+    margin: 10px auto;
     width: 90%;
     font-size: 18px;
     white-space: normal; }
