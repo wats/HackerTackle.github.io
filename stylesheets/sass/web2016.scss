@@ -12,8 +12,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
@@ -24,7 +24,7 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
@@ -109,9 +109,9 @@ nav {
 	display: -moz-flex;
 	display: -webkit-flex;
 	display: flex;
-	-webkit-justify-content: space-between; 
+	-webkit-justify-content: space-between;
 	justify-content: space-between;
-	-webkit-align-items: center; 
+	-webkit-align-items: center;
 	align-items: center;
 
 	li {
@@ -261,7 +261,7 @@ header {
 		height: 20px;
 		width: 150px;
 		@include align-x;
-		bottom: 0;
+		bottom: -1px;
 	}
 }
 footer {
@@ -327,7 +327,7 @@ footer {
 			font-size: 16px;
 			line-height: 1.6;
 			padding: 50px 0 5px;
-			white-space: pre-line;	
+			white-space: pre-line;
 		}
 		.head02date {
 			font-size: 28px;
@@ -411,7 +411,7 @@ footer {
 			font-size: 20px;
 			white-space: normal;
 			padding-top: 50px;
-			margin-bottom: -10px;	
+			margin-bottom: -10px;
 		}
 		.head02date {
 			font-size: 32px;
