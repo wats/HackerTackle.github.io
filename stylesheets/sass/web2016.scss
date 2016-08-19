@@ -12,8 +12,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
@@ -24,7 +24,7 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
@@ -90,7 +90,7 @@ section {
 a {
 	text-decoration: none;
 }
-h2 {
+section h1 {
 	font-family: "Roboto Condensed", sans-serif;
 	font-size: 40px;
 }
@@ -109,9 +109,9 @@ nav {
 	display: -moz-flex;
 	display: -webkit-flex;
 	display: flex;
-	-webkit-justify-content: space-between; 
+	-webkit-justify-content: space-between;
 	justify-content: space-between;
-	-webkit-align-items: center; 
+	-webkit-align-items: center;
 	align-items: center;
 
 	li {
@@ -142,12 +142,7 @@ nav {
 	width: 240px;
 	@include align-x;
 }
-.header-pc {
-	display: block;
-}
-.header-sp {
-	display: none;
-}
+
 header {
 	background: url(../images/web2016/main.png) center, #000101;
 	background-repeat: no-repeat;
@@ -158,10 +153,6 @@ header {
 		top: 65px;
 		font-size: 30px;
 		width: 100%;
-	}
-	h1 {
-		text-indent: -9999px;
-		overflow: hidden;
 	}
 	.head02date {
 		bottom: 169px;
@@ -193,13 +184,10 @@ header {
 		font-family: "Hiragino Kaku Gothic ProN", sans-serif;
 		margin-top: 10px;
 	}
-	.p-pc {
+	.info p {
 			display: block;
-			white-space: pre-line;
 			padding: 0 20px;
-	}
-	.p-sp {
-		display: none;
+			margin-top:10px;
 	}
 }
 .map-container {
@@ -225,7 +213,7 @@ header {
 	-webkit-transform: translateY(-50%);
 	-ms-transform: translateY(-50%);
 
-	h2 {
+	section h1 {
 		font-weight: bold;
 		line-height: 1.6;
 	}
@@ -286,8 +274,14 @@ footer {
 	header * {
 			@include align-x;
 		}
+	.logo{
+		display:none;
 	}
+}
 @media only screen and (max-width: 899px) {
+	.logo{
+		display:block;
+	}
 	section {
 		padding: 45px 0;
 	}
@@ -305,12 +299,7 @@ footer {
 			background-position: center;
 		}
 	}
-	.header-pc {
-		display: none;
-	}
-	.header-sp {
-		display: block;
-	}
+
 	header {
 		background: url(../images/web2016/main-sp-bg.png) center, #000101;
 		background-size: cover;
@@ -327,7 +316,7 @@ footer {
 			font-size: 16px;
 			line-height: 1.6;
 			padding: 50px 0 5px;
-			white-space: pre-line;	
+			white-space: pre-line;
 		}
 		.head02date {
 			font-size: 28px;
@@ -350,15 +339,11 @@ footer {
 		height: 15px;
 	}
 	.info {
-		h2 {
+		h1 {
 			margin-bottom: 15px;
 		}
-		.p-pc {
-			display: none;
-		}
-		.p-sp {
-			display: block;
-			margin: 0 auto;
+		p {
+			margin: 10px auto;
 			width: 90%;
 			font-size: 18px;
 			white-space: normal;
@@ -411,7 +396,7 @@ footer {
 			font-size: 20px;
 			white-space: normal;
 			padding-top: 50px;
-			margin-bottom: -10px;	
+			margin-bottom: -10px;
 		}
 		.head02date {
 			font-size: 32px;
