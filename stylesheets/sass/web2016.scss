@@ -249,7 +249,7 @@ header {
 		height: 20px;
 		width: 150px;
 		@include align-x;
-		bottom: 0;
+		bottom: -1px;
 	}
 }
 footer {
