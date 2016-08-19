@@ -246,7 +246,7 @@ header {
     transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
-    bottom: 0; }
+    bottom: -1px; }
 
 footer {
   height: 98px;
