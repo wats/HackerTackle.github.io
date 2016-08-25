@@ -18,6 +18,7 @@
 	<link href="stylesheets/web2016.css" rel="stylesheet">
 	<link rel="icon" href="favicon.ico">
 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script async="" src="..//www.google-analytics.com/analytics.js"></script>
 	<script>
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -35,35 +36,165 @@
 
 <body>
 <nav>
-	<ul class="nav-top">
-		<!--<li><a href="#" class="nav-left">開催概要</a></li>-->
-		<li><h1><a href="./" class="nav-middle">HACKER TACKLE</a></h1></li>
-		<!--<li><a href="#" class="nav-right">参加登録</a></li>-->
-	</ul>
-
+	<div class="nav-pc">
+		<ul class="nav-top">
+			<li><a href="#sec-concept">CONCEPT</a></li>
+			<li><a href="#sec-timetable">TIMETABLE</a></li>
+			<li><h1><a href="./" class="nav-middle">HACKER TACKLE</a></h1></li>
+			<li><a href="#sec-speakers">SPEAKERS</a></li>
+			<li><a href="http://peatix.com/event/193097" target="_blank" class="nav-btn">参加登録</a></li>
+		</ul>
+	</div>
+	<div class="nav-sp">
+		<div class="nav-top">
+			<!--<a href="#" class="hamburger">
+				<span class="bar"></span>
+				<span class="bar"></span>
+				<span class="bar"></span>
+			</a>-->
+			<h1><a href="./" class="nav-middle">HACKER TACKLE</a></h1>
+			<!--<a href="http://peatix.com/event/193097" target="_blank" class="nav-btn">参加登録</a>-->
+		</div>
+		<!--<ul class="nav-dropdown">
+			<li><a href="#sec-concept">CONCEPT</a></li>
+			<li><a href="#sec-timetable">TIMETABLE</a></li>
+			<li><a href="#sec-speakers">SPEAKERS</a></li>
+		</ul>-->
+	</div>
+	<div class="trapezoid"></div>
 </nav>
 
 <header>
-	<div class="trapezoid"></div>
 	<p class="head01intro">あらゆるプログラマのためのコミュニティイベント</p>
 	<p class="logo"><img src="images/web2016/main-sp-ttl.png" alt="HACKER TACKLE"></p>
-	<p class="head02date">2016.09.10 PM13:00-18:30(OPEN 12:30)</p>
+	<p class="head02date">2016.09.10 13:00-18:30(OPEN 12:30)</p>
 	<p class="head03place">福岡県Ruby・コンテンツ産業振興センター</p>
-	<a href="http://peatix.com/event/193097" class="header-btn">参加登録</a>
+	<a href="http://peatix.com/event/193097" target="_blank" class="header-btn">参加登録</a>
 </header>
 
 <section class="info">
-	<h1>CONCEPT</h1>
+	<a name="sec-concept" class="anchor"></a>
+	<h2>CONCEPT</h2>
 	<p>HackerTackleは、プログラマのための総合技術イベントです。</p>
-  <p>「ハッカー・タックル/博多・来る」の意味を持つイベント名には、多くのハッカーが博多に来て、さまざまな議論をぶつけあう場になればという思いがこめられています。</p>
+	<p>「ハッカー・タックル/博多・来る」の意味を持つイベント名には、多くのハッカーが博多に来て、さまざまな議論をぶつけあう場になればという思いがこめられています。</p>
 	<p>イマのプログラマにとって必要な知識を切り取った、さまざまな技術に関するセッションを用意しています。</p>
 	<p>ぜひ博多に来て、新しい技術を吸収し、議論をぶつけあってみませんか？</p>
+</section>
+
+<section class="timetable">
+	<a name="sec-timetable" class="anchor"></a>
+	<h2>TIMETABLE</h2>
+	<table>
+	<colgroup>
+		<col class="col-time">
+		<col class="col-h-lane">
+		<col class="col-k-lane">
+		<col class="col-t-lane">
+	</colgroup>
+	<thead>
+	<tr>
+		<th>TIME</th>
+		<th class="h-lane-head"><span>H-LANE</span></th>
+		<th class="k-lane-head"><span>K-LANE</span></th>
+		<th class="t-lane-head"><span>T-LANE</span></th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr class="row-break">
+		<td>12:50 - 13:00</td>
+		<td colspan="3"><strong>受付</strong></td>
+	</tr>
+	<tr>
+		<td>12:50 - 13:00</td>
+		<td><strong>開会宣言</strong></td>
+		<td><strong>開会宣言</strong></td>
+		<td><strong>開会宣言</strong></td>
+	</tr>
+	<tr class="row-break">
+		<td></td>
+		<td colspan="3"><strong>休憩</strong></td>
+	</tr>
+	<tr>
+		<td>14:00 - 14:50</td>
+		<td><strong>Speaker Name</strong>誰かが何かを喋ったり、踊ったりするのかな</td>
+		<td><strong>コンテンツ</strong>発表発表発表発 表発表発表発表発表 発表発表発表発表発表 発表発表発表</td>
+		<td><strong>やること</strong>ハードな勉強</td>
+	</tr>
+	<tr class="row-break">
+		<td></td>
+		<td colspan="3"><strong>休憩</strong></td>
+	</tr>
+	<tr>
+		<td>15:00 - 15:50</td>
+		<td><strong>Speaker Name</strong>誰かが何かを喋ったり、踊ったりするのかな</td>
+		<td><strong>コンテンツ</strong>発表発表発表発 表発表発表発表発表 発表発表発表発表発表 発表発表発表</td>
+		<td><strong>やること</strong>ハードな勉強</td>
+	</tr>
+	<tr class="row-break">
+		<td></td>
+		<td colspan="3"><strong>休憩</strong></td>
+	</tr>
+	<tr>
+		<td>16:00 - 16:50</td>
+		<td><strong>Speaker Name</strong>誰かが何かを喋ったり、踊ったりするのかな</td>
+		<td><strong>コンテンツ</strong>発表発表発表発 表発表発表発表発表 発表発表発表発表発表 発表発表発表</td>
+		<td><strong>やること</strong>ハードな勉強</td>
+	</tr>
+	<tr class="row-break">
+		<td></td>
+		<td colspan="3"><strong>休憩</strong></td>
+	</tr>
+	<tr>
+		<td>17:00 - 17:50</td>
+		<td><strong>Speaker Name</strong>誰かが何かを喋ったり、踊ったりするのかな</td>
+		<td><strong>コンテンツ</strong>発表発表発表発 表発表発表発表発表 発表発表発表発表発表 発表発表発表</td>
+		<td><strong>やること</strong>ハードな勉強</td>
+	</tr>
+	<tr class="row-break">
+		<td></td>
+		<td colspan="3"><strong>休憩</strong></td>
+	</tr>
+	<tr>
+		<td>18:00 - 18:50</td>
+		<td><strong>Speaker Name</strong>誰かが何かを喋ったり、踊ったりするのかな</td>
+		<td><strong>コンテンツ</strong>発表発表発表発 表発表発表発表発表 発表発表発表発表発表 発表発表発表</td>
+		<td><strong>やること</strong>ハードな勉強</td>
+	</tr>
+	<tr class="row-break">
+		<td>19:00 - 21:00</td>
+		<td colspan="3"><strong>ビバッシュ</strong></td>
+	</tr>
+	</tbody>
+	</table>
+
+	<div class="lane-hide-btns">
+		<a href="#sec-timetable" class="lane-btn h-lane-btn">H-LANE</a>
+		<a href="#sec-timetable" class="lane-btn k-lane-btn">K-LANE</a>
+		<a href="#sec-timetable" class="lane-btn t-lane-btn">T-LANE</a>
+	</div>
+
+	<a href="#" class="download-btn">PDFダウンロード</a>
+</section>
+
+<section class="speakers">
+	<a name="sec-speakers" class="anchor"></a>
+	<h2>SPEAKERS</h2>
+	<ul>
+		<li><div><img src="images/web2016/popup-img.png" alt="きしだ なおき"><i class="h-lane"></i></div>きしだ なおき</li>
+		<li><div><img src="images/web2016/popup-img.png" alt="きしだ なおき"><i class="h-lane"></i></div>きしだ なおき</li>
+		<li><div><img src="images/web2016/popup-img.png" alt="きしだ なおき"><i class="k-lane"></i></div>きしだ なおき</li>
+		<li><div><img src="images/web2016/popup-img.png" alt="きしだ なおき"><i class="k-lane"></i></div>きしだ なおき</li>
+		<li><div><img src="images/web2016/popup-img.png" alt="きしだ なおき"><i class="k-lane"></i></div>きしだ なおき</li>
+		<li><div><img src="images/web2016/popup-img.png" alt="きしだ なおき"><i class="t-lane"></i></div>きしだ なおき</li>
+		<li><div><img src="images/web2016/popup-img.png" alt="きしだ なおき"><i class="t-lane"></i></div>きしだ なおき</li>
+		<li><div><img src="images/web2016/popup-img.png" alt="きしだ なおき"><i class="t-lane"></i></div>きしだ なおき</li>
+	</ul>
 </section>
 
 <section class="map-container">
 	<div id="map"></div>
 	<div class="overlay"><div class="overlay-inner">
-		<h1>ACCESS</h1>
+		<h2>ACCESS</h2>
 		<div class="line"></div>
 		<p class="over-txt01">福岡県Ruby・コンテンツ産業<br>振興センター</p>
 		<p class="over-txt02">
@@ -79,6 +210,23 @@
 </section>
 
 <footer><small>© 2016 HACKER TACKLE</small></footer>
+<div id="overlay">
+<div class="popup">
+	<div class="cancel cancel-sp"></div>
+	<img src="images/web2016/popup-img.png" alt="きしだ なおき">
+	<div class="popup-text">
+		<h3>きしだ なおき</h3>
+		<p class="profile-links"><a href="#" target="_blank" class="blog">Blog</a>/<a href="#" target="_blank" class="twitter">Twitter</a></p>
+		<p>これからのコンピューティングの変化とJava<br>
+		これまで、安定的にコンピュータの性能をあげてきた、ムーアの法則が終わろうとしています。</p>
+		<p>そのような中では、これまでのようにCPUだけを相手にしたプログラミングでは、性能が出せなくなっていきます。GPUやFPGAなど、さまざまな形態のデバイスを使ったコンピューティングが必要です。かといって、GPUやFPGAに対応したプログラムをそれぞれのプログラマが行うのは大変です。</p>
+		<p>このセッションでは、これからのコンピューティングはどのようになっていくか、それにあわせてJavaがどのようになっていくかを、ディープラーニングの実装を例に解説します。</p>
+	</div>
+	<div class="cancel cancel-pc"></div>
+	<div class="cancel cancel-sp"></div>
+</div>
+</div>
+
 
 <script>
 function initMap() {
@@ -112,5 +260,6 @@ marker.setMap(map);
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCctzgo4qPy4EJxH6lnuQYOa1CGvZzWuYE&callback=initMap"
 async defer></script>
+<script src="javascripts/script.js"></script>
 </body>
 </html>
