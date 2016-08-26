@@ -315,14 +315,17 @@ header .header-btn:hover {
 /* line 257, sass/web2016.scss */
 .timetable table .h-lane-head {
   background-color: #5a8000;
+  z-index: 2;
 }
 /* line 260, sass/web2016.scss */
 .timetable table .k-lane-head {
   background-color: #007307;
+  z-index: 2;
 }
 /* line 263, sass/web2016.scss */
 .timetable table .t-lane-head {
   background-color: #008d5a;
+  z-index: 2;
 }
 /* line 266, sass/web2016.scss */
 .timetable table .row-break {
